@@ -129,7 +129,7 @@ function setup(tower, w) {
 function init() {
 	setup("svg-lt", 700)
 	setup("svg-rt", 700)
-	setup("svg", 300)
+	setup("svg-primary", 300)
 }
 
 function random(n) {
