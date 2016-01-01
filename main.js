@@ -1,7 +1,7 @@
 // Just a modified copy of this: http://bl.ocks.org/enjalot/1429426
 
-var w = 400
-var h = 400
+var w = 700
+var h = 700
 var barOffsetX = 40
 var textOffsetY = 0
 
