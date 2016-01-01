@@ -68,7 +68,7 @@ function bars(data) {
 
   var textLabels = text
     .attr("transform", function(d,i) {
-      return "translate(" + [-50, y(i)] + ")"
+      return "translate(" + [10, y(i)] + ")"
     })
     .text( function (d) { return d; })
     .attr("font-family", "sans-serif")
