@@ -3,7 +3,7 @@ body{
   background: url(https://upload.wikimedia.org/wikipedia/commons/c/ca/Clock_Tower_%28Big_Ben%29.jpg);
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: center top;
+  background-position: center -500px;
 }
 
 .left-tower {
