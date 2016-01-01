@@ -74,7 +74,7 @@ function bars(tower, data) {
     .attr("transform", function(d,i) {
       return "translate(" + [10, y(i) + (y.rangeBand()/2)] + ")"
     })
-    .text( function (d) { return d + " hectoseconds"; })
+    .text( function (d) { return d.prefixValue + " " + d.prefix; })
     .attr("font-family", "sans-serif")
     .attr("font-size", "12px")
     .attr("dominant-baseline", "middle")
@@ -160,10 +160,17 @@ function unitData() {
     maxPad = currentTime.length
   }
   currentTime = currentTime.padRight(maxPad, "0")
+
+  prefixKeys = Object.keys(prefixes)
+  prefixValues = prefixKeys.map(function(k) { return prefixes[k]; });
+
+  prefixID = 0
   for (var i = 0, len = currentTime.length; i < len; i++) {
     digit = currentTime[i]
     if(digit == ".") {
       digit = "0"
+    } else {
+      prefixID++
     }
     digit = parseInt(digit)
     // Put in range 0-100
@@ -174,7 +181,11 @@ function unitData() {
     } else if(digit > 100) {
       digit = 100
     }
-    val.push(digit)
+    val.push({
+      digit: digit,
+      prefix: prefixKeys[prefixID],
+      prefixValue: prefixValues[prefixID],
+    })
   }
   return val
 }
