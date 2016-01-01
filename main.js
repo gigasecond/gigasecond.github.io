@@ -4,7 +4,7 @@ var w = 700
 var h = 700
 var barOffsetX = 120
 
-function bars(data) {
+function bars(tower, data) {
   max = d3.max(data)
 
   // nice breakdown of d3 scales
@@ -17,7 +17,7 @@ function bars(data) {
     .domain(d3.range(data.length))
     .rangeBands([0, h], .2)
 
-  var vis = d3.select("#barchart")
+  var vis = d3.select("#barchart"+tower)
 
   // a good written tutorial of d3 selections coming from protovis
   // http://www.jeromecukier.net/blog/2011/08/09/d3-adding-stuff-and-oh-understanding-selections/
@@ -81,9 +81,8 @@ function bars(data) {
     .attr("fill", "red");
 }
 
-
-function init() {
-  var svg = d3.select("#svg")
+function setup(tower) {
+  var svg = d3.select("#"+tower)
     .attr("width", w+100)
     .attr("height", h+100)
 
@@ -94,14 +93,18 @@ function init() {
     .attr("fill", "none")
 
   svg.append("svg:g")
-    .attr("id", "barchart")
+    .attr("id", "barchart"+tower)
     .attr("transform", "translate(50,50)")
 
   function update() {
-    bars(unitData())
+    bars(tower, unitData())
   }
   update()
   setInterval(update, 98)
+}
+
+function init() {
+	setup("svg-lt")
 }
 
 function random(n) {
