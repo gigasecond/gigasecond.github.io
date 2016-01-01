@@ -15,8 +15,6 @@ function bars(tower, data) {
     .domain([0, max])
     .range([0, w-barOffsetX])
 
-    console.log(max, w-barOffsetX, x())
-
   y = d3.scale.ordinal()
     .domain(d3.range(data.length))
     .rangeBands([0, h], .2)
@@ -158,12 +156,12 @@ maxPad = 0
 function unitData() {
   val = []
   currentTime = GigaSeconds().toString()
-  prefixes = metricPrefixes(currentTime)
   if(currentTime.length > maxPad) {
     maxPad = currentTime.length
   }
   currentTime = currentTime.padRight(maxPad, "0")
 
+  prefixes = metricPrefixes(currentTime)
   prefixKeys = Object.keys(prefixes)
   prefixValues = prefixKeys.map(function(k) { return prefixes[k]; });
 
