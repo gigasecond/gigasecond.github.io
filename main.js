@@ -52,6 +52,20 @@ function bars(data) {
     .attr("transform", function(d,i) {
       return "translate(" + [0, y(i)] + ")"
     })
+
+  // Text
+  var text = svgContainer.selectAll("text")
+    .data(data)
+    .enter()
+    .append("text");
+
+  var textLabels = text
+    .attr("x", function(d) { return 50; })
+    .attr("y", function(d) { return 50; })
+    .text( function (d) { return "( " + 50 + ", " + 50 +" )"; })
+    .attr("font-family", "sans-serif")
+    .attr("font-size", "20px")
+    .attr("fill", "red");
 }
 
 
