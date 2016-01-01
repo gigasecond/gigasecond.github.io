@@ -17,6 +17,8 @@ body{
   margin-left: 25px;
   margin-top: 13px;
   background-color: white;
+  padding: .01em;
+  opacity: .6em;
   width: 600px;
   height: 700px;
 }
