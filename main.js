@@ -71,7 +71,7 @@ function init() {
     .attr("transform", "translate(50,50)")
 
   function update() {
-    bars(random(10))
+    bars(unitData())
   }
   update()
   setInterval(update, 3000)
@@ -84,3 +84,51 @@ function random(n) {
   }
   return val
 }
+
+
+/*
+  GigaSecond code
+*/
+
+//String.prototype.padRight = function(l,c) {return this+Array(l-this.length+1).join(c||" ")}
+
+secondsPerGigaSecond = new Decimal(1).times(1024).times(1024).times(1024)
+secondsPerYear = new Decimal(1).times(365).times(24).times(60).times(60)
+gigaSecondsPerYear = secondsPerYear.dividedBy(secondsPerGigaSecond)
+billion = 1000000000
+gigaSecondsPerBillionYears = new Decimal(billion).times(gigaSecondsPerYear)
+universeAgeGigaSeconds = gigaSecondsPerBillionYears.times(13.8095)
+
+function timeSinceUnixEpochGigaSeconds() {
+	return new Decimal(new Date().getTime()).dividedBy(1000).dividedBy(secondsPerGigaSecond)
+}
+
+universeAgeAtUnixEpoch = universeAgeGigaSeconds.minus(timeSinceUnixEpochGigaSeconds())
+universeAgeAtUnixEpoch = new Decimal("405587619.6812618494")
+
+function GigaSeconds() {
+  return universeAgeAtUnixEpoch.plus(timeSinceUnixEpochGigaSeconds())
+}
+
+//function update() {
+//  gigaSecond = universeAgeAtUnixEpoch.plus(timeSinceUnixEpochGigaSeconds())
+//  document.getElementById("gigasecond").textContent = gigaSecond.toString().padRight(64, "-")
+//}
+//update()
+//setInterval(update, 100)
+
+
+function unitData() {
+  val = []
+  currentTime := GigaSeconds().toString()
+  for (var i = 0, currentTime = str.length; i < len; i++) {
+    digit = currentTime[i]
+    if(digit == ".") {
+      digit = "0"
+    }
+    digit = parseInt(digit)
+    val.push(digit)
+  }
+  return val
+}
+
