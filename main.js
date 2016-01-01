@@ -176,15 +176,15 @@ function GigaSeconds() {
 maxPad = 0
 function unitData(gs) {
   val = []
-  currentTime = gs.toString()
+  var currentTime = gs.toString()
   if(currentTime.length > maxPad) {
     maxPad = currentTime.length
   }
   currentTime = currentTime.padRight(maxPad, "0")
 
-  prefixes = metricPrefixes(currentTime)
-  prefixKeys = []
-  prefixValues = []
+  var prefixes = metricPrefixes(currentTime)
+  var prefixKeys = []
+  var prefixValues = []
   for (var k in prefixes) {
     if (prefixes.hasOwnProperty(k)) {
       for(var i = 0; i < 3; i++) {
@@ -198,9 +198,9 @@ function unitData(gs) {
   //console.log(currentTime)
   console.log(JSON.stringify(prefixes))
 
-  prefixID = 0
+  var prefixID = 0
   for (var i = 0, len = currentTime.length; i < len; i++) {
-    digit = currentTime[i]
+    var digit = currentTime[i]
     if(digit == ".") {
       continue
     }
