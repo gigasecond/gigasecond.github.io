@@ -123,7 +123,7 @@ function setup(tower, w) {
     bars(tower, w, gs, unitData(gs))
   }
   update()
-  setInterval(update, 98)
+  setInterval(update, 109)
 }
 
 function init() {
