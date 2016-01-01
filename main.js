@@ -74,7 +74,7 @@ function init() {
     bars(random(10))
   }
   update()
-  setInterval(update, 100)
+  setInterval(update, 3000)
 }
 
 function random(n) {
