@@ -8,7 +8,6 @@ function bars(tower, data) {
   max = d3.max(data, function(d) {
     return d.digit
   })
-  console.log(max)
 
   // nice breakdown of d3 scales
   // http://www.jeromecukier.net/blog/2011/08/11/d3-scales-and-color/
@@ -16,7 +15,7 @@ function bars(tower, data) {
     .domain([0, max])
     .range([0, w-barOffsetX])
 
-    console.log(max, w-barOffsetX, x)
+    console.log(max, w-barOffsetX, x())
 
   y = d3.scale.ordinal()
     .domain(d3.range(data.length))
