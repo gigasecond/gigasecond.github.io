@@ -3,6 +3,7 @@
 var w = 400
 var h = 400
 var barOffsetX = 40
+var textOffsetY = -10
 
 function bars(data) {
   max = d3.max(data)
@@ -69,7 +70,7 @@ function bars(data) {
 
   var textLabels = text
     .attr("transform", function(d,i) {
-      return "translate(" + [10, y(i)] + ")"
+      return "translate(" + [10, y(i)+textOffsetY] + ")"
     })
     .text( function (d) { return d; })
     .attr("font-family", "sans-serif")
