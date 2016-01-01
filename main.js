@@ -65,11 +65,11 @@ function bars(data) {
     .ease("exp")
     .attr("width", 0)
     .remove()
-  
 
   var textLabels = text
-    .attr("x", function(d) { return 50; })
-    .attr("y", function(d) { return 50; })
+    .attr("transform", function(d,i) {
+      return "translate(" + [50, y(i)] + ")"
+    })
     .text( function (d) { return "( " + 50 + ", " + 50 +" )"; })
     .attr("font-family", "sans-serif")
     .attr("font-size", "20px")
