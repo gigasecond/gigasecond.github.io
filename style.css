@@ -7,6 +7,10 @@ body{
   overflow-y: scroll;
 }
 
+#svg, .left-tower, .right-tower{
+  position: absolute;
+}
+
 .left-tower {
   background: #482000;
   -webkit-transform: matrix(0.23,-.0775,0,0.25,-258,-130);
@@ -14,7 +18,6 @@ body{
   -ms-transform: matrix(0.23,-.0775,0,0.25,-258,-130);
   -o-transform: matrix(0.23,-.0775,0,0.25,-258,-130);
   transform: matrix(0.23,-.0775,0,0.25,-258,-130);
-  position: absolute;
 }
 
 .right-tower {
