@@ -1,3 +1,13 @@
+html{
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  padding: 0;
+  margin: 8px;
+}
+
 body{
   text-align: center;
   background: url(https://upload.wikimedia.org/wikipedia/commons/c/ca/Clock_Tower_%28Big_Ben%29.jpg);
