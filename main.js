@@ -19,9 +19,6 @@ function bars(tower, data) {
     .domain(d3.range(data.length))
     .rangeBands([0, h], .2)
 
-  console.log("x:", x)
-  console.log("y:", y)
-
   var vis = d3.select("#barchart"+tower)
 
   // a good written tutorial of d3 selections coming from protovis
