@@ -38,7 +38,7 @@ function bars(data) {
   // exit
   bars.exit()
     .transition()
-    .duration(300)
+    .duration(100)
     .ease("exp")
     .attr("width", 0)
     .remove()
@@ -62,7 +62,7 @@ function bars(data) {
 
   text.exit()
     .transition()
-    .duration(300)
+    .duration(100)
     .ease("exp")
     .attr("width", 0)
     .remove()
