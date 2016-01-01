@@ -89,8 +89,8 @@ function setup(tower) {
   svg.append("svg:rect")
     .attr("width", "100%")
     .attr("height", "100%")
-    .attr("stroke", "#000")
-    .attr("fill", "none")
+    //.attr("stroke", "#000")
+    //.attr("fill", "none")
 
   svg.append("svg:g")
     .attr("id", "barchart"+tower)
