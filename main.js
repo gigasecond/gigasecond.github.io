@@ -38,7 +38,7 @@ function bars(data) {
   // exit
   bars.exit()
     .transition()
-    .duration(100)
+    .duration(80)
     .ease("exp")
     .attr("width", 0)
     .remove()
@@ -46,7 +46,7 @@ function bars(data) {
   bars
     .attr("stroke-width", 4)
     .transition()
-    .duration(300)
+    .duration(80)
     .ease("quad")
     .attr("width", x)
     .attr("height", y.rangeBand())
@@ -62,12 +62,15 @@ function bars(data) {
 
   text.exit()
     .transition()
-    .duration(100)
+    .duration(80)
     .ease("exp")
     .attr("width", 0)
     .remove()
 
   var textLabels = text
+    .transition()
+    .duration(80)
+    .ease("quad")
     .attr("transform", function(d,i) {
       return "translate(" + [10, y(i) + (y.rangeBand()/2)] + ")"
     })
