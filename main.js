@@ -134,6 +134,12 @@ function unitData() {
     digit = parseInt(digit)
     // Put in range 0-100
     digit = (digit+1) * 10
+
+    if(digit <= 0) {
+      digit = 1
+    } else if(digit > 100) {
+      digit = 100
+    }
     val.push(digit)
   }
   return val
