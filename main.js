@@ -127,7 +127,7 @@ function setup(tower, w) {
 }
 
 function init() {
-  setup("svg", 300)
+  setup("svg", 648)
 	setup("svg-lt", 700)
 	setup("svg-rt", 700)
 }
