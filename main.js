@@ -31,7 +31,7 @@ function bars(tower, w, gs, data) {
 
   // enter
   bars.enter()
-    .append("svg:rect")
+    .append("rect")
     .attr("class", "bar")
     .attr("fill", "#800")
     .attr("stroke", "#800")
