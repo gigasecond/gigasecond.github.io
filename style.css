@@ -43,10 +43,11 @@ body{
 
 #info-sub {
   background-color: white;
-  padding: .01em;
+  padding: 3em;
+  padding-top: 1em;
   opacity: .9;
-  width: 600px;
-  height: 700px;
+  width: 300px;
+  height: 600px;
   border-bottom-right-radius: 16px;
 }
 
