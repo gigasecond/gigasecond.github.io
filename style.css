@@ -14,9 +14,11 @@ body{
 }
 
 #info-sub {
-  padding-left: 25px;
-  padding-top: 13px;
+  margin-left: 25px;
+  margin-top: 13px;
   background-color: white;
+  width: 600px;
+  height: 700px;
 }
 
 #svg, .left-tower, .right-tower{
@@ -27,9 +29,11 @@ body{
 .left-tower {
   transform: matrix(0.23,-.0775,0,0.25,-506,-130);
   margin-top: 58px;
+  z-index: -1;
 }
 
 .right-tower {
   transform: matrix(0.145,.107,0,0.25,-232,-108);
   margin-top: 58px;
+  z-index: -1;
 }
