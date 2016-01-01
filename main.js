@@ -104,7 +104,7 @@ function setup(tower) {
 }
 
 function init() {
-	//setup("svg-lt")
+	setup("svg-lt")
 	setup("svg-rt")
 }
 
