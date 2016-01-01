@@ -9,6 +9,11 @@ body{
 
 #info{
   float: left;
+  width: 0;
+  height: 0;
+}
+
+#info-sub {
   padding-left: 25px;
   padding-top: 13px;
   background-color: white;
