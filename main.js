@@ -50,7 +50,7 @@ function bars(tower, data) {
     .transition()
     .duration(80)
     .ease("quad")
-    .attr("width", x.digit)
+    .attr("width", x)
     .attr("height", y.rangeBand())
     .attr("transform", function(d,i) {
       return "translate(" + [barOffsetX, y(i)] + ")"
