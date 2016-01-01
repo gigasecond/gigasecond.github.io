@@ -4,17 +4,17 @@ var h = 700
 var barOffsetX = 120
 
 function bars(tower, w, gs, data) {
-  max = d3.max(data, function(d) {
+  var max = d3.max(data, function(d) {
     return d.digit
   })
 
   // nice breakdown of d3 scales
   // http://www.jeromecukier.net/blog/2011/08/11/d3-scales-and-color/
-  x = d3.scale.linear()
+  var x = d3.scale.linear()
     .domain([0, max])
     .range([0, w-barOffsetX])
 
-  y = d3.scale.ordinal()
+  var y = d3.scale.ordinal()
     .domain(d3.range(data.length))
     .rangeBands([0, h], .2)
 
@@ -82,25 +82,25 @@ function bars(tower, w, gs, data) {
     .attr("dominant-baseline", "middle")
     .attr("fill", "red");
 
-    // Label
-    var label = vis.selectAll("text.label").data([gs.toString()])
+  // Label
+  var label = vis.selectAll("text.label").data([gs.toString()])
 
-    label.enter()
-      .append("text")
-      .classed('label', true);
+  label.enter()
+    .append("text")
+    .classed('label', true);
 
-    label.exit()
-      .transition()
-      .duration(80)
-      .ease("exp")
-      .attr("width", 0)
-      .remove()
+  label.exit()
+    .transition()
+    .duration(80)
+    .ease("exp")
+    .attr("width", 0)
+    .remove()
 
-    label
-      .text(function (d) { return d })
-      .attr("font-family", "sans-serif")
-      .attr("font-size", "24px")
-      .attr("fill", "black");
+  label
+    .text(function (d) { return d })
+    .attr("font-family", "sans-serif")
+    .attr("font-size", "24px")
+    .attr("fill", "black");
 }
 
 function setup(tower, w) {
