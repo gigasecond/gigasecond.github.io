@@ -71,7 +71,7 @@ function bars(data) {
     .attr("transform", function(d,i) {
       return "translate(" + [10, y(i) + (y.rangeBand()/2)] + ")"
     })
-    .text( function (d) { return d; })
+    .text( function (d) { return d + "hectoseconds"; })
     .attr("font-family", "sans-serif")
     .attr("font-size", "12px")
     .attr("dominant-baseline", "middle")
