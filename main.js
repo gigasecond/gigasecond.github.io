@@ -74,7 +74,7 @@ function init() {
     bars(unitData())
   }
   update()
-  setInterval(update, 100)
+  setInterval(update, 500)
 }
 
 function random(n) {
