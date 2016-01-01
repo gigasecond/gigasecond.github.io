@@ -49,7 +49,7 @@ function bars(tower, w, gs, data) {
     .transition()
     .duration(80)
     .ease("quad")
-    .attr("width", function (d) { console.log(x(1), x(d.digit)); return x(d.digit); })
+    .attr("width", function (d) { return x(d.digit); })
     .attr("height", y.rangeBand())
     .attr("transform", function(d,i) {
       return "translate(" + [barOffsetX, y(i)] + ")"
@@ -129,7 +129,7 @@ function setup(tower, w) {
 function init() {
 	setup("svg-lt", 700)
 	setup("svg-rt", 700)
-	setup("svg", 500)
+	setup("svg", 700)
 }
 
 function random(n) {
