@@ -13,7 +13,6 @@ function bars(tower, w, gs, data) {
   x = d3.scale.linear()
     .domain([0, max])
     .range([0, w-barOffsetX])
-  console.log(tower, w, x(1));
 
   y = d3.scale.ordinal()
     .domain(d3.range(data.length))
@@ -50,7 +49,7 @@ function bars(tower, w, gs, data) {
     .transition()
     .duration(80)
     .ease("quad")
-    .attr("width", function (d) { return x(d.digit); })
+    .attr("width", function (d) { console.log(x(1), x(d.digit)); return x(d.digit); })
     .attr("height", y.rangeBand())
     .attr("transform", function(d,i) {
       return "translate(" + [barOffsetX, y(i)] + ")"
