@@ -25,6 +25,10 @@ body{
   right: 390px;
 }
 
+#primary-display>svg {
+  border-bottom-left-radius: 16px;
+}
+
 #info{
   float: left;
   width: 0;
@@ -39,6 +43,7 @@ body{
   opacity: .6em;
   width: 600px;
   height: 700px;
+  border-bottom-right-radius: 16px;
 }
 
 #svg, .left-tower, .right-tower{
