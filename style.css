@@ -5,3 +5,11 @@ body{
   background-repeat: no-repeat;
   background-position: center top;
 }
+
+.left-tower {
+  -webkit-transform: matrix(0.600,-0.176,-0.014,0.571,-103.857,-172.712);
+  -moz-transform: matrix(0.600,-0.176,-0.014,0.571,-103.857px,-172.712px);
+  -ms-transform: matrix(0.600,-0.176,-0.014,0.571,-103.857,-172.712);
+  -o-transform: matrix(0.600,-0.176,-0.014,0.571,-103.857,-172.712);
+  transform: matrix(0.600,-0.176,-0.014,0.571,-103.857,-172.712);
+}
