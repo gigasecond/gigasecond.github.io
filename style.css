@@ -18,9 +18,9 @@ body{
 
 .right-tower {
   background: #482000;
-  -webkit-transform: matrix(0.145,.107,0,0.25,168,-103);
-  -moz-transform: matrix(0.145,.107,0,0.25,168px,-103px);
-  -ms-transform: matrix(0.145,.107,0,0.25,168,-103);
-  -o-transform: matrix(0.145,.107,0,0.25,168,-103);
-  transform: matrix(0.145,.107,0,0.25,168,-103);
+  -webkit-transform: matrix(0.145,.107,0,0.25,-135,-107);
+  -moz-transform: matrix(0.145,.107,0,0.25,-135px,-107px);
+  -ms-transform: matrix(0.145,.107,0,0.25,-135,-107);
+  -o-transform: matrix(0.145,.107,0,0.25,-135,-107);
+  transform: matrix(0.145,.107,0,0.25,-135,-107);
 }
