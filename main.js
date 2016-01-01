@@ -120,7 +120,7 @@ function setup(tower, w) {
 
   function update() {
     gs = GigaSeconds()
-    bars(tower, gs, unitData(gs))
+    bars(tower, w, gs, unitData(gs))
   }
   update()
   setInterval(update, 98)
