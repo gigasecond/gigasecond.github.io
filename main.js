@@ -204,7 +204,6 @@ function unitData(gs) {
     if(digit == ".") {
       continue
     }
-    prefixID++
     digit = parseInt(digit)
     // Put in range 0-100
     digit = (digit+1) * 10
@@ -219,6 +218,7 @@ function unitData(gs) {
       prefix: prefixKeys[prefixID],
       prefixValue: prefixValues[prefixID],
     })
+    prefixID++
   }
   return val
 }
