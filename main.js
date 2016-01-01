@@ -164,6 +164,8 @@ function unitData() {
   prefixes = metricPrefixes(currentTime)
   prefixKeys = Object.keys(prefixes)
   prefixValues = prefixKeys.map(function(k) { return prefixes[k]; });
+  console.log(currentTime)
+  console.log(prefixes)
 
   prefixID = 0
   for (var i = 0, len = currentTime.length; i < len; i++) {
