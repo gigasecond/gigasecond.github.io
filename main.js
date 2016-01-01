@@ -86,9 +86,9 @@ function setup(tower) {
     .attr("width", w+100)
     .attr("height", h+100)
 
-  svg.append("svg:rect")
-    .attr("width", "100%")
-    .attr("height", "100%")
+  //svg.append("svg:rect")
+    //.attr("width", "100%")
+    //.attr("height", "100%")
     //.attr("stroke", "#000")
     //.attr("fill", "none")
 
