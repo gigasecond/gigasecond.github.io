@@ -92,7 +92,7 @@ function random(n) {
 
 String.prototype.padRight = function(l,c) {return this+Array(l-this.length+1).join(c||" ")}
 
-secondsPerGigaSecond = new Decimal(1).times(1024).times(1024).times(1024)
+secondsPerGigaSecond = new Decimal(1).times(1000).times(1000).times(1000)
 secondsPerYear = new Decimal(1).times(365).times(24).times(60).times(60)
 gigaSecondsPerYear = secondsPerYear.dividedBy(secondsPerGigaSecond)
 billion = 1000000000
