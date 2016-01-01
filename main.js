@@ -72,7 +72,7 @@ function bars(data) {
     })
     .text( function (d) { return "( " + 50 + ", " + 50 +" )"; })
     .attr("font-family", "sans-serif")
-    .attr("font-size", "20px")
+    .attr("font-size", "12px")
     .attr("fill", "red");
 }
 
