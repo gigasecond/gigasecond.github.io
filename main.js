@@ -57,10 +57,11 @@ function bars(tower, gs, data) {
     })
 
   // Text
-  var text = vis.selectAll("text").data(data)
+  var text = vis.selectAll("text.desc").data(data)
   
   text.enter()
-  	.append("text");
+  	.append("text")
+    .classed('desc', true);
 
   text.exit()
     .transition()
@@ -83,10 +84,11 @@ function bars(tower, gs, data) {
     .attr("fill", "red");
 
     // Label
-    var label = vis.selectAll("label").data([gs.toString()])
+    var label = vis.selectAll("text.label").data([gs.toString()])
 
     label.enter()
       .append("text")
+      .classed('label', true);
 
     label.exit()
       .transition()
