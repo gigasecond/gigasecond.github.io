@@ -2,7 +2,7 @@
 
 var w = 700
 var h = 700
-var barOffsetX = 40
+var barOffsetX = 120
 
 function bars(data) {
   max = d3.max(data)
@@ -71,7 +71,7 @@ function bars(data) {
     .attr("transform", function(d,i) {
       return "translate(" + [10, y(i) + (y.rangeBand()/2)] + ")"
     })
-    .text( function (d) { return d + "hectoseconds"; })
+    .text( function (d) { return d + " hectoseconds"; })
     .attr("font-family", "sans-serif")
     .attr("font-size", "12px")
     .attr("dominant-baseline", "middle")
