@@ -1,10 +1,9 @@
 // Just a modified copy of this: http://bl.ocks.org/enjalot/1429426
 
-var w = 700
 var h = 700
 var barOffsetX = 120
 
-function bars(tower, gs, data) {
+function bars(tower, w, gs, data) {
   max = d3.max(data, function(d) {
     return d.digit
   })
@@ -104,7 +103,7 @@ function bars(tower, gs, data) {
       .attr("fill", "black");
 }
 
-function setup(tower) {
+function setup(tower, w) {
   var svg = d3.select("#"+tower)
     .attr("width", w+100)
     .attr("height", h+100)
@@ -128,9 +127,9 @@ function setup(tower) {
 }
 
 function init() {
-	setup("svg-lt")
-	setup("svg-rt")
-	setup("svg")
+	setup("svg-lt", 700)
+	setup("svg-rt", 700)
+	setup("svg", 500)
 }
 
 function random(n) {
