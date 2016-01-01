@@ -13,6 +13,7 @@ function bars(tower, w, gs, data) {
   x = d3.scale.linear()
     .domain([0, max])
     .range([0, w-barOffsetX])
+  console.log(tower, w);
 
   y = d3.scale.ordinal()
     .domain(d3.range(data.length))
