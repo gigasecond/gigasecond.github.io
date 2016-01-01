@@ -2,6 +2,7 @@
 
 var w = 400
 var h = 400
+var barOffsetX = ;
 
 function bars(data) {
   max = d3.max(data)
@@ -50,7 +51,7 @@ function bars(data) {
     .attr("width", x)
     .attr("height", y.rangeBand())
     .attr("transform", function(d,i) {
-      return "translate(" + [0, y(i)] + ")"
+      return "translate(" + [barOffsetX, y(i)] + ")"
     })
 
   // Text
