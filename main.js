@@ -7,12 +7,15 @@ var barOffsetX = 120
 function bars(tower, data) {
   max = d3.max(data)
 
+  alert("max: " + max)
+
   // nice breakdown of d3 scales
   // http://www.jeromecukier.net/blog/2011/08/11/d3-scales-and-color/
   x = d3.scale.linear()
     .domain([0, max])
     .range([0, w-barOffsetX])
 
+  alert("x: " + x)
   y = d3.scale.ordinal()
     .domain(d3.range(data.length))
     .rangeBands([0, h], .2)
