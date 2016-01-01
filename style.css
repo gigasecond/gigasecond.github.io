@@ -23,6 +23,7 @@ body{
   height: 0;
   position: relative;
   right: 390px;
+  top: -8px;
 }
 
 #primary-display>svg {
@@ -33,6 +34,9 @@ body{
   float: left;
   width: 0;
   height: 0;
+  position: relative;
+  top: -8px;
+  left: -8px;
 }
 
 #info-sub {
