@@ -74,7 +74,7 @@ function init() {
     bars(unitData())
   }
   update()
-  setInterval(update, 3000)
+  setInterval(update, 500)
 }
 
 function random(n) {
@@ -127,6 +127,8 @@ function unitData() {
       digit = "0"
     }
     digit = parseInt(digit)
+    // Put in range 0-100
+    digit = (digit+1) * 10
     val.push(digit)
   }
   return val
