@@ -193,7 +193,7 @@ function unitData() {
 // courtesy of @Andoryuuta
 function metricPrefixes(gigasec){
 	var upNames = ['giga', 'tera', 'peta', 'exa', 'zetta', 'yotta']
-var downNames = ['mega', 'kilo', 'none', 'milli', 'micro', 'nano', 'pico', 'femto', 'atto', 'zepto', 'yocto']
+var downNames = ['mega', 'kilo', '', 'milli', 'micro', 'nano', 'pico', 'femto', 'atto', 'zepto', 'yocto']
 	var outMap = {}
   var decPlace = gigasec.indexOf(".")
   
