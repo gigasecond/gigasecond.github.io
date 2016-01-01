@@ -22,7 +22,7 @@ function bars(tower, w, gs, data) {
 
   // a good written tutorial of d3 selections coming from protovis
   // http://www.jeromecukier.net/blog/2011/08/09/d3-adding-stuff-and-oh-understanding-selections/
-  var bars = vis.selectAll("rect.bar").data(data)
+  var bars = vis.selectAll("rect.bar"+tower).data(data)
 
   // update
   bars
@@ -32,7 +32,7 @@ function bars(tower, w, gs, data) {
   // enter
   bars.enter()
     .append("rect")
-    .attr("class", "bar")
+    .attr("class", "bar"+tower)
     .attr("fill", "#800")
     .attr("stroke", "#800")
 
