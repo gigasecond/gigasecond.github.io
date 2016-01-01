@@ -9,11 +9,12 @@ body{
 
 .left-tower {
   background: #482000;
-  -webkit-transform: matrix(0.23,-.0775,0,0.25,-105,-130);
-  -moz-transform: matrix(0.23,-.0775,0,0.25,-105px,-130px);
-  -ms-transform: matrix(0.23,-.0775,0,0.25,-105,-130);
-  -o-transform: matrix(0.23,-.0775,0,0.25,-105,-130);
-  transform: matrix(0.23,-.0775,0,0.25,-105,-130);
+  -webkit-transform: matrix(0.23,-.0775,0,0.25,-258,-130);
+  -moz-transform: matrix(0.23,-.0775,0,0.25,-258px,-130px);
+  -ms-transform: matrix(0.23,-.0775,0,0.25,-258,-130);
+  -o-transform: matrix(0.23,-.0775,0,0.25,-258,-130);
+  transform: matrix(0.23,-.0775,0,0.25,-258,-130);
+  position: absolute;
 }
 
 .right-tower {
