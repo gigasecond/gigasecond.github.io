@@ -8,6 +8,7 @@ function bars(tower, data) {
   max = d3.max(data, function(d) {
     return d.digit
   })
+  console.log(max)
 
   // nice breakdown of d3 scales
   // http://www.jeromecukier.net/blog/2011/08/11/d3-scales-and-color/
