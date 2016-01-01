@@ -76,7 +76,7 @@ function bars(tower, data) {
     .attr("transform", function(d,i) {
       return "translate(" + [10, y(i) + (y.rangeBand()/2)] + ")"
     })
-    .text( function (d) { return d.prefixValue + " " + d.prefix; })
+    .text( function (d) { return d.prefixValue + " " + d.prefix + "seconds"; })
     .attr("font-family", "sans-serif")
     .attr("font-size", "12px")
     .attr("dominant-baseline", "middle")
