@@ -1,1 +1,1 @@
-alert("GigaSeconds!");
+//alert("GigaSeconds!");
