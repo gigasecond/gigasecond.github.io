@@ -155,7 +155,6 @@ function unitData() {
   val = []
   currentTime = GigaSeconds().toString()
   prefixes = metricPrefixes(currentTime)
-  console.log(currentTime, prefixes)
   if(currentTime.length > maxPad) {
     maxPad = currentTime.length
   }
