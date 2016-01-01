@@ -54,10 +54,18 @@ function bars(data) {
     })
 
   // Text
-  var text = svgContainer.selectAll("text")
-    .data(data)
-    .enter()
-    .append("text");
+  var text = vis.selectAll("text").data(data)
+  
+  text.enter()
+  	.append("text");
+
+  text.exit().
+    .transition()
+    .duration(300)
+    .ease("exp")
+    .attr("width", 0)
+    .remove()
+  
 
   var textLabels = text
     .attr("x", function(d) { return 50; })
