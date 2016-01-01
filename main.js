@@ -162,10 +162,20 @@ function unitData() {
   currentTime = currentTime.padRight(maxPad, "0")
 
   prefixes = metricPrefixes(currentTime)
-  prefixKeys = Object.keys(prefixes)
-  prefixValues = prefixKeys.map(function(k) { return prefixes[k]; });
-  console.log(currentTime)
-  console.log(JSON.stringify(prefixes))
+  prefixKeys = []
+  prefixValues = []
+  for (var k in prefixes) {
+    if (prefixes.hasOwnProperty(k)) {
+      for(i = 0; i < 3; i++) {
+        prefixKeys.push(k)
+        prefixValues.push(prefixes[k])
+      }
+    }
+  }
+  //prefixKeys = Object.keys(prefixes)
+  //prefixValues = prefixKeys.map(function(k) { return prefixes[k]; });
+  //console.log(currentTime)
+  //console.log(JSON.stringify(prefixes))
 
   prefixID = 0
   for (var i = 0, len = currentTime.length; i < len; i++) {
