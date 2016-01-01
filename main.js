@@ -84,8 +84,17 @@ function bars(tower, gs, data) {
 
     // Label
     var label = vis.selectAll("label").data([gs.toString()])
-    label.enter().append("text")
-    label.exit().remove()
+
+    label.enter()
+      .append("text")
+
+    label.exit()
+      .transition()
+      .duration(80)
+      .ease("exp")
+      .attr("width", 0)
+      .remove()
+
     label
       .text(function (d) { return d })
       .attr("font-family", "sans-serif")
