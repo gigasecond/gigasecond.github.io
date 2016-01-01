@@ -154,6 +154,8 @@ maxPad = 0
 function unitData() {
   val = []
   currentTime = GigaSeconds().toString()
+  prefixes = metricPrefixes(currentTime)
+  console.log(currentTime, prefixes)
   if(currentTime.length > maxPad) {
     maxPad = currentTime.length
   }
@@ -177,3 +179,38 @@ function unitData() {
   return val
 }
 
+
+// courtesy of @Andoryuuta
+function metricPrefixes(gigasec){
+	var upNames = ['giga', 'tera', 'peta', 'exa', 'zetta', 'yotta']
+var downNames = ['mega', 'kilo', 'none', 'milli', 'micro', 'nano', 'pico', 'femto', 'atto', 'zepto', 'yocto']
+	var outMap = {}
+  var decPlace = gigasec.indexOf(".")
+  
+	var unalignedUpChars = decPlace % 3
+  var alignedUpCount = Math.floor(decPlace / 3)
+  var downCount = Math.floor((gigasec.length - decPlace) / 3)
+  
+  //Parse unaligned nums left of decimal
+  if(unalignedUpChars != 0){
+  	cur = gigasec.slice(0, unalignedUpChars)
+  	outMap[upNames[alignedUpCount]] = parseInt(cur, 10)
+  }
+  
+  //parse aligned nums left of decimal
+  for(i=alignedUpCount; i > 0 ; i--){
+  	off = decPlace - i*3
+  	cur = gigasec.slice(off, off+3)
+    outMap[upNames[i-1]] = parseInt(cur, 10)
+  }
+  
+  
+  //parse aligned nums right of decimal
+  for(i=0; i < downCount; i++){
+  	off = decPlace+1 + i*3
+    cur = gigasec.slice(off, off+3)
+    outMap[downNames[i]] = parseInt(cur, 10)
+  }
+  
+  return outMap
+}
