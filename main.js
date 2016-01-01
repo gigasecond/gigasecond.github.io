@@ -70,7 +70,11 @@ function init() {
     .attr("id", "barchart")
     .attr("transform", "translate(50,50)")
 
-  bars(random(10))
+  function update() {
+    bars(random(10))
+  }
+  update()
+  setInterval(update, 100)
 }
 
 function random(n) {
