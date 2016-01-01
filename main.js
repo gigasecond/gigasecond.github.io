@@ -196,7 +196,7 @@ function unitData(gs) {
   //prefixKeys = Object.keys(prefixes)
   //prefixValues = prefixKeys.map(function(k) { return prefixes[k]; });
   //console.log(currentTime)
-  console.log(JSON.stringify(prefixKeys))
+  //console.log(JSON.stringify(prefixKeys))
 
   var prefixID = 0
   for (var i = 0, len = currentTime.length; i < len; i++) {
