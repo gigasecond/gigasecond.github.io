@@ -187,9 +187,12 @@ function unitData(gs) {
   var prefixValues = []
   for (var k in prefixes) {
     if (prefixes.hasOwnProperty(k)) {
-      for(var i = 0; i < 3; i++) {
-        prefixKeys.push(k)
-        prefixValues.push(prefixes[k])
+      prefixKeys.push(k)
+      prefixValues.push(prefixes[k])
+
+      for(var i = 0; i < 2; i++) {
+      	prefixKeys.push("")
+	prefixValues.push("")
       }
     }
   }
