@@ -7,6 +7,12 @@ body{
   overflow-y: scroll;
 }
 
+#primary-display {
+  float: right;
+  width: 0;
+  height: 0;
+}
+
 #info{
   float: left;
   width: 0;
