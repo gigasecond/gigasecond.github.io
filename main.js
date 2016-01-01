@@ -98,7 +98,7 @@ function init() {
     bars(unitData())
   }
   update()
-  setInterval(update, 500)
+  setInterval(update, 100)
 }
 
 function random(n) {
