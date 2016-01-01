@@ -74,6 +74,7 @@ function bars(data) {
     .text( function (d) { return d; })
     .attr("font-family", "sans-serif")
     .attr("font-size", "12px")
+    .attr("dominant-baseline", "middle")
     .attr("fill", "red");
 }
 
