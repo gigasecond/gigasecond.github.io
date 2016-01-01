@@ -202,10 +202,9 @@ function unitData(gs) {
   for (var i = 0, len = currentTime.length; i < len; i++) {
     digit = currentTime[i]
     if(digit == ".") {
-      digit = "0"
-    } else {
-      prefixID++
+      continue
     }
+    prefixID++
     digit = parseInt(digit)
     // Put in range 0-100
     digit = (digit+1) * 10
