@@ -120,7 +120,7 @@ function GigaSeconds() {
 
 function unitData() {
   val = []
-  currentTime := GigaSeconds().toString()
+  currentTime = GigaSeconds().toString()
   for (var i = 0, currentTime = str.length; i < len; i++) {
     digit = currentTime[i]
     if(digit == ".") {
