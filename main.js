@@ -83,7 +83,7 @@ function bars(tower, w, gs, data) {
     .attr("fill", "red");
 
   // Label
-  var label = vis.selectAll("text.label").data([gs.toString()])
+  var label = vis.selectAll("text.label").data(["GS " + gs.toString()])
 
   label.enter()
     .append("text")
