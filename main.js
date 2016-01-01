@@ -74,7 +74,7 @@ function init() {
     bars(unitData())
   }
   update()
-  setInterval(update, 500)
+  setInterval(update, 100)
 }
 
 function random(n) {
@@ -90,7 +90,7 @@ function random(n) {
   GigaSecond code
 */
 
-//String.prototype.padRight = function(l,c) {return this+Array(l-this.length+1).join(c||" ")}
+String.prototype.padRight = function(l,c) {return this+Array(l-this.length+1).join(c||" ")}
 
 secondsPerGigaSecond = new Decimal(1).times(1024).times(1024).times(1024)
 secondsPerYear = new Decimal(1).times(365).times(24).times(60).times(60)
@@ -118,9 +118,14 @@ function GigaSeconds() {
 //setInterval(update, 100)
 
 
+maxPad = 0
 function unitData() {
   val = []
   currentTime = GigaSeconds().toString()
+  if(currentTime.length > maxPad) {
+    maxPad = currentTime.length
+  }
+  currentTime = currentTime.padRight(maxPad, "0")
   for (var i = 0, len = currentTime.length; i < len; i++) {
     digit = currentTime[i]
     if(digit == ".") {
