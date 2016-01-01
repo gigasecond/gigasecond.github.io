@@ -4,7 +4,7 @@ var w = 700
 var h = 700
 var barOffsetX = 120
 
-function bars(tower, data) {
+function bars(tower, gs, data) {
   max = d3.max(data, function(d) {
     return d.digit
   })
@@ -81,6 +81,16 @@ function bars(tower, data) {
     .attr("font-size", "12px")
     .attr("dominant-baseline", "middle")
     .attr("fill", "red");
+
+    // Label
+    var text = vis.selectAll("text").data([gs.toString()])
+    text.enter.append("text")
+    text.exit.remove()
+    text
+      .text(function (d) { return d })
+      .attr("font-family", "sans-serif")
+      .attr("font-size", "24px")
+      .attr("fill", "black");
 }
 
 function setup(tower) {
@@ -99,7 +109,8 @@ function setup(tower) {
     .attr("transform", "translate(50,50)")
 
   function update() {
-    bars(tower, unitData())
+    gs = GigaSeconds()
+    bars(tower, gs, unitData(gs))
   }
   update()
   setInterval(update, 98)
@@ -153,9 +164,9 @@ function GigaSeconds() {
 
 
 maxPad = 0
-function unitData() {
+function unitData(gs) {
   val = []
-  currentTime = GigaSeconds().toString()
+  currentTime = gs.toString()
   if(currentTime.length > maxPad) {
     maxPad = currentTime.length
   }
