@@ -28,7 +28,6 @@ body{
 
 #primary-display>svg {
   border-bottom-left-radius: 16px;
-  width: 500px;
   background: white;
   opacity: .9;
 }
