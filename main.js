@@ -59,7 +59,7 @@ function bars(data) {
   text.enter()
   	.append("text");
 
-  text.exit().
+  text.exit()
     .transition()
     .duration(300)
     .ease("exp")
