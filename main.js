@@ -2,7 +2,7 @@
 
 var w = 400
 var h = 400
-var barOffsetX = 20;
+var barOffsetX = 20
 
 function bars(data) {
   max = d3.max(data)
