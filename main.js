@@ -16,6 +16,8 @@ function bars(tower, data) {
     .domain([0, max])
     .range([0, w-barOffsetX])
 
+    console.log(max, w-barOffsetX, x)
+
   y = d3.scale.ordinal()
     .domain(d3.range(data.length))
     .rangeBands([0, h], .2)
